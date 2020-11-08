@@ -2,7 +2,7 @@
 pipeline{
   agent any
   environment {
-  PATH = "${PATH}|${getTerraformPath()}"
+  PATH = "${PATH}"
 
 }
   stages{
@@ -10,7 +10,7 @@ pipeline{
 
       steps{
 
-           sh "terraform init2"
+           sh "terraform init"
 
       }
     }
