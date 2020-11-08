@@ -3,6 +3,7 @@ pipeline{
   agent any
   environment {
   PATH = "${PATH}|${getTerraformPath()}"
+  echo PATH
 }
   stages{
     stage('terraform init'){
