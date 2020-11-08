@@ -1,7 +1,7 @@
 
 pipeline{
   agent any
-  states{
+  stages{
     stage('terraform init'){
 
       steps{
