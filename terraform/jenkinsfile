@@ -9,7 +9,7 @@ pipeline{
     stage('terraform init'){
 
       steps{
-
+           sh 'pwd'
            sh "terraform init"
 
       }
