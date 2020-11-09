@@ -10,7 +10,7 @@ pipeline{
 
       steps{
            sh 'pwd'
-           sh 'cd var/lib/jenkins/workspace/terraform/terraform'
+           sh 'cd /var/lib/jenkins/workspace/terraform/terraform'
             sh 'pwd'
            sh "terraform init"
 
