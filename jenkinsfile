@@ -8,10 +8,12 @@ pipeline{
   stages{
 
     stage(" terraform create my s3 bucket")   {
+
+      steps{
           script{
                   createMyS3Bucket("awsraj-tf-1212")
           }
-
+      }
     }
     stage('terraform init and apply - dev environment'){
 
