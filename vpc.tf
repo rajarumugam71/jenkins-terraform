@@ -1,8 +1,8 @@
 resource "aws_vpc" "awsraj_vpc" {
-  cidr_block       = "S{var.vpc_cidr}"
-  instance_tenancy = "S{var.tenancy}"
+  cidr_block       = "${var.vpc_cidr}"
+  instance_tenancy = "${var.tenancy}"
   tags = {
-    Name = "S{terraform.workspace}-awsraj-vpc"
+    Name = "${terraform.workspace}-awsraj-vpc"
 
   }
 
