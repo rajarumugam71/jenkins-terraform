@@ -12,7 +12,7 @@ pipeline{
       steps{
           sh "ansible-playbook  s3-bucket.yml"
           }
-      }
+
     }
 
     stage('terraform init and apply - dev environment'){
