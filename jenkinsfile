@@ -44,9 +44,7 @@ pipeline{
 }
 
 def getTerraformPath(){
-
    def   tfHome =  tool name: 'terraform-12', type: 'terraform'
-
    echo tfHome
    return tfHome
 }
