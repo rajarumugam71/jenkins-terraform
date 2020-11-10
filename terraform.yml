@@ -5,7 +5,7 @@
     s3_bicket: awsraj-tf-1212
     key: awsraj-tf-1212
     region: us-east-2
-    app-env: dev
+    app_env: dev
   tasks:
     -name: Run Terraform Scripts
      terraform:
@@ -16,4 +16,4 @@
          key: "{{ s3_bucket }}"
          region: "{{ region }}"
       variables_fie: "{{ app_env }}.tfvars"
-      workspace: {{app_env}}
+      workspace: "{{app_env}}"
