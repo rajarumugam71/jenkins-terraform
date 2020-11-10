@@ -27,6 +27,7 @@ pipeline{
       }
     }
 
+
     stage('terraform init and apply - prod environment'){
 
       steps{
