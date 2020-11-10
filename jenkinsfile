@@ -7,7 +7,7 @@ pipeline{
 }
   stages{
 
-    stage(" terraform create my s3 bucket")   {
+    stage("terraform create my s3 bucket")   {
 
       steps{
           script{
@@ -15,6 +15,7 @@ pipeline{
           }
       }
     }
+
     stage('terraform init and apply - dev environment'){
 
       steps{
@@ -23,7 +24,7 @@ pipeline{
            sh "terraform init"
            sh "terraform apply -var-file=dev.tfvars -auto-approve"
 
-      }git
+      }
     }
 
     stage('terraform init and apply - prod environment'){
