@@ -6,6 +6,13 @@ pipeline{
 
 }
   stages{
+
+    stage(" terraform create my s3 bucket")   {
+          script{
+                  createMyS3Bucket("awsraj-tf-1212")
+          }
+
+    }
     stage('terraform init and apply - dev environment'){
 
       steps{
@@ -14,7 +21,7 @@ pipeline{
            sh "terraform init"
            sh "terraform apply -var-file=dev.tfvars -auto-approve"
 
-      }
+      }git
     }
 
     stage('terraform init and apply - prod environment'){
@@ -39,4 +46,8 @@ def getTerraformPath(){
 
    echo tfHome
    return tfHome
+}
+
+def createMyS3Bucket(bucketName){
+    sh returnStatus: true, script: "aws s3 mb ${bucketName} -region-us-east-2"
 }
