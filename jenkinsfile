@@ -12,6 +12,8 @@ pipeline{
       steps{
           sh 'pwd'
           sh "ansible-playbook  s3-bucket.yml"
+          sh 'pwd'
+          
           }
 
     }
