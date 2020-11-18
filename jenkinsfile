@@ -10,6 +10,7 @@ pipeline{
     stage("terraform create my s3 bucket")   {
 
       steps{
+          sh 'pwd'
           sh "ansible-playbook  s3-bucket.yml"
           }
 
